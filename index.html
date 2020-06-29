@@ -1,0 +1,35 @@
+<!doctype html>
+<head>
+  <title>Connect 4</title>
+  <link href="connect4.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<h1>CONNECT FOUR</h1>
+
+<div id='game-div'>
+  <div class='left'>
+    <div id='current-player-turn'>Player 1 Turn</div>
+    <div id='current-player-piece-wrapper'>
+      <div class ='p1' id='current-player-piece'></div>
+    </div>
+  </div>
+
+  <div class='right'>
+    <button id='new-game-button'>New Game</button>
+  </div>
+
+  <div id="game">
+    <table id="board"></table>
+  </div>
+</div>
+
+<div id='bottom-wrapper'>
+  <div id='bottom'></div>
+</div>
+
+<script src="connect4.js"></script>
+
+</body>
+</html>

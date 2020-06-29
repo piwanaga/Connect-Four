@@ -1,0 +1,145 @@
+/* game board table */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 900;
+  background-color: rgb(233, 233, 233);
+  /* background-color: rgb(228, 72, 72); */
+}
+
+h1 {
+  text-align: center; 
+  margin-top: .9rem;
+  margin-bottom: .5rem;
+  font-weight: 100;
+  font-size: 4rem;
+}
+
+#game-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.left {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 200px;
+  font-size: 1.5rem;
+}
+
+#current-player-piece-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 10%;
+}
+
+#current-player-piece {
+  margin: 5px;
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
+  transition: background-color .5s;
+}
+
+.right {
+  order: 3;
+  margin-top: 200px;
+}
+
+#new-game-button {
+  font-size: 1.5rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 900;
+  color: black;
+  background-color: rgb(198, 231, 252);
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0px 12px darkgray;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#new-game-button:hover {
+  background-color: rgb(125, 200, 247);
+}
+
+#new-game-button:active {
+  background-color: rgb(125, 200, 247);
+  box-shadow: 0 6px #666;
+  transform: translateY(4px);
+}
+
+#game {
+  order: 2;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.main-board td {
+  width: 90px;
+  height: 90px;
+  border: solid 5px yellow;
+  border-radius: 5px;
+  background-color: white;
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece {
+  margin: 5px;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  animation: drop .5s forwards ease-in;
+  position: relative;
+}
+
+@keyframes drop {
+  100% {
+    top: 0px;
+  }
+}
+
+.p1 {
+  background-color: red;
+}
+
+.p2 {
+  background-color: black;
+}
+
+/* column-top is table row of clickable areas for each column */
+#column-top {
+  margin-bottom: 100px;
+}
+
+#column-top td {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+#column-top td:hover {
+  background-color: rgb(198, 231, 252);
+}
+
+#bottom-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#bottom {
+  height: 100px;
+  width: 650px;
+  background-color: blue;
+  border-radius: 5px;
+}
