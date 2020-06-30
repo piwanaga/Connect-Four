@@ -130,7 +130,7 @@ function resetGame(evt) {
 /** handleClick: handle click of column top to play piece */
 
 function handleClick(evt) {
-  if (checkForWin() || checkForWin()){
+  if (checkForWin() || checkForTie()){
     setTimeout(gameOver, 550);
     return
   }

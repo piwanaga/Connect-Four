@@ -130,6 +130,7 @@ h1 {
 
 #column-top td:hover {
   background-color: rgb(198, 231, 252);
+  cursor: pointer;
 }
 
 #bottom-wrapper {
